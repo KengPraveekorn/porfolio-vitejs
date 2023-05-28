@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 // components
 import Navbar from "./components/Navbar";
+import Opensidebar from "./components/Opensidebar";
 
 // contents
 import Home from "./contents/Home";
@@ -16,6 +17,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        {/* <Opensidebar /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

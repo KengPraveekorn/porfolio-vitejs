@@ -14,21 +14,28 @@
 
 .App {
   display: flex;
-  width: 100vw;
+  /* width: 100vh; */
   min-height: 100vh;
 }
 
 .nav {
   padding: 60px 30px 0px 30px;
   height: 100%;
+  width: 250px;
   flex: var(--sidebar-flex);
   background: #333;
+  position: fixed;
+  /* overflow-x: hidden;
+  z-index: 1;
+  top: 0;
+  left: 0; */
 }
 .nav ul {
   font-size: var(--fontsize-nav);
   text-align: center;
   list-style: none;
 }
+
 .nav ul li {
   margin: 40px;
 }
@@ -37,10 +44,57 @@
   text-decoration: none;
 }
 
+.closebtn{
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 30px;
+  margin-left: 50px;
+}
+.closebtn:hover {
+  color: #fff;
+  transition: 0.5s;
+}
+
+/* .openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+} */
+
+@media screen and (max-height: 450px) {
+  .nav {padding-top: 15px;}
+  .nav a {font-size: 18px;}
+}
+
 .condiv {
   padding: 100px;
-  background-color: #f4f5f9;
+  margin-left: 240px;
+  /* background-color: #f4f5f9; */
   flex: var(--condiv-flex);
+  background: linear-gradient(-45deg, #EE7752,#E73C7E,#23A6D5,#23D5AB);
+  background-size: 400% 400% ;
+  animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  0% {
+    background-position: 0 50%;
+  }
+
 }
 
 .home {
@@ -52,10 +106,14 @@
 
 .profilepic {
   border-radius: 40%;
-  width: 400px;
+  width: 500px;
   margin: 30px;
 }
-
+.profilepic:hover {
+  background-color: #fff;
+  /* border-radius: 100%; */
+  transition: 1s;
+}
 
 .social {
   position: absolute;
@@ -65,27 +123,32 @@
 }
 .social i {
   padding-right: 30px;
-  font-size: 25px;
-  color: #9a9b9c;
+  font-size: 40px;
+  color: #070707;
 }
 .social i:hover{
-  color: #333;
+  color: #f8ebeb;
 }
 
 .typingeffect {
-  color:#333;
+  color:#fbfbfb;
   font-size: var(--typing-font);
   margin-bottom: 30px;
 }
 
 .about {
   text-align: center;
+  color: #fff;
 }
 .subtopic{
   margin: 10px 10px 30px 10px !important;
+  color: #fff;
 }
 h1,h2,h3,h4 {
   margin: 10px;
+}
+h3 {
+  color: #fff;
 }
 p {
   font-size: var(--fontsize-p);
@@ -115,6 +178,13 @@ p {
   margin: 30px;
 }
 
-.active {
- font-weight: bolder;
+.nav ul li a:hover {
+  color: rgb(201, 255, 5);
+  transition: 1.5s;
 }
+.nav ul li a:focus  {
+  color: rgb(201, 255, 5);
+  font-weight: bolder;
+}
+
+

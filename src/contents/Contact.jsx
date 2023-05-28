@@ -3,7 +3,7 @@ import Social from '../components/Social'
 
 const Contact = () => {
   return (
-    <div className='condiv'>
+    <div className='condiv contant'>
       <h1 className='subtopic'>Contact Me</h1>
       <h3>Email : Praveekorn@gmail.com</h3>
       <h3>Instagram : Keng.27</h3>

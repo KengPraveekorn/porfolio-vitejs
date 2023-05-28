@@ -3,7 +3,7 @@ import Widecard from "../components/Widecard";
 
 const Education = () => {
   return (
-    <div className="condiv">
+    <div className="condiv education">
       <h1 className="subtopic">My Education</h1>
       <Widecard
         title="Faculty Computer Engineering"
