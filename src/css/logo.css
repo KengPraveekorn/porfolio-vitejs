@@ -2,7 +2,7 @@
     width: 200px;
     margin: 0px 360px 30px 0px;
     position: relative;
-    animation-name: animalogo;
+    animation-name: animajs;
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
@@ -12,8 +12,8 @@
     width: 110px;
     margin: 150px 0px 0px 0px;
     position: absolute;
-    animation-name: animalogo;
-    animation-duration: 1.5s;
+    animation-name: animahtml;
+    animation-duration: 1.4s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 }
@@ -22,13 +22,27 @@
     width: 80px;
     margin: 160px 0px 0px 360px;
     position: absolute;
-    animation-name: animalogo;
-    animation-duration: 1.5s;
+    animation-name: animacss;
+    animation-duration: 1.6s;
     animation-iteration-count: infinite;
     animation-timing-function: ease;
 }
 
-@keyframes animalogo {
+@keyframes animajs {
+    0% {top:25px;}
+    25% {top: 12px;}
+    50% {top:25px;}
+    75% {top: 12px;}
+    100% {top: 25px;}
+}
+@keyframes animahtml {
+    0% {top:25px;}
+    25% {top: 12px;}
+    50% {top:25px;}
+    75% {top: 12px;}
+    100% {top: 25px;}
+}
+@keyframes animacss {
     0% {top:25px;}
     25% {top: 12px;}
     50% {top:25px;}
