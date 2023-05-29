@@ -1,47 +1,61 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
+import { slide as Menu } from "react-burger-menu";
 
 // components
 import Navitem from "./Navitem";
-import Opensidebar from "./Opensidebar";
+
+// Css
+// import "../css/ham-menu.css";
 
 const Navbar = () => {
-  // const openSidebar = () => {
-  //   document.getElementById("mysidebar").style.width = "250px";
-  //   document.getElementById("main").style.marginLeft = "250px";
+  // const toggleHam = (x) => {
+  //   x.classList.toggle("change");
+  //   const myMenu = document.getElementById("myMenu");
+  //   console.log(myMenu);
+  //   if (myMenu !== null) {
+  //     // myMenu.className += "menu-active";
+  //     console.log("The element exists in the DOM");
+  //   } else {
+  //     // myMenu.className = "menu";
+  //     console.log("The element does NOT exist in the DOM");
+  //   }
   // };
-  const CloseSidebar = () => {
-    if (document.getElementById("nav") && document.getElementById("sidebar")) {
-      document.getElementById("nav").style.width = "0";
-      document.getElementById("sidebar").style.marginLeft = "0";
+
+  const myMenu = useRef(null);
+  const [isOpen, setOpen] = useState(false);
+
+  useEffect(() => {
+    console.log("myMenu..", myMenu.current);
+  });
+
+  const toggleHam = (x) => {
+    x.classList.toggle("change");
+
+    if (myMenu.className === "menu") {
+      myMenu.className += "menu-active";
+    } else {
+      myMenu.className = "menu";
     }
   };
 
   return (
     <>
-      <div id="mysidebar" className="sidebar">
-        <nav className="nav">
-          <ul className="active">
-            <Navitem
-              item="X"
-              href="javascript:void(0)"
-              className="closebtn"
-              onClick={CloseSidebar}
-            ></Navitem>
-            <Navitem item="Home" tolink="/"></Navitem>
-            <Navitem item="About" tolink="/about"></Navitem>
-            <Navitem item="Education" tolink="/education"></Navitem>
-            <Navitem item="Skills" tolink="/skills"></Navitem>
-            <Navitem item="Contact" tolink="/contact"></Navitem>
-          </ul>
-        </nav>
+      <div className="sidebar">
         
-        {/* <span
-          styles={{ fontSize: "30", cursor: "pointer" }}
-          onclick={Opensidebar}
-        >
-          &#9776; open
-        </span> */}
+          <nav className="nav">
+            <ul ref={myMenu} id="myMenu" className="menu">
+              <Navitem item="Home" tolink="/"></Navitem>
+              <Navitem item="About" tolink="/about"></Navitem>
+              <Navitem item="Education" tolink="/education"></Navitem>
+              <Navitem item="Skills" tolink="/skills"></Navitem>
+              <Navitem item="Contact" tolink="/contact"></Navitem>
+            </ul>
+            {/* <div className="ham-menu" onClick={toggleHam}>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div> */}
+          </nav>
       </div>
     </>
   );

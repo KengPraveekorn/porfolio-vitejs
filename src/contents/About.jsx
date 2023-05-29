@@ -8,7 +8,7 @@ const About = () => {
     <div className="condiv about">
       <h1 className="subtopic">About Me</h1>
       <img src={profilepic} alt="profile" className="profilepic" />
-      <h3>Hi, I'm Praveekorn</h3>
+      <h3>Hi, I'm Keng</h3>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, dolorem
         commodi excepturi obcaecati explicabo maxime adipisci, autem, ducimus ab

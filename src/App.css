@@ -44,31 +44,6 @@
   text-decoration: none;
 }
 
-.closebtn{
-  text-decoration: none;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 30px;
-  margin-left: 50px;
-}
-.closebtn:hover {
-  color: #fff;
-  transition: 0.5s;
-}
-
-/* .openbtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-} */
-
 @media screen and (max-height: 450px) {
   .nav {padding-top: 15px;}
   .nav a {font-size: 18px;}
@@ -186,5 +161,6 @@ p {
   color: rgb(201, 255, 5);
   font-weight: bolder;
 }
+
 
 
